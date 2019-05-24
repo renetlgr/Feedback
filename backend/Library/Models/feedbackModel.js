@@ -2,10 +2,10 @@ let mongoose = require('mongoose');
 let Schema   = mongoose.Schema;
 
 let feedbackSchema = new Schema({
-	name : String,
-	message : String,
-	type : String,
-	status : String,
+	name : {type:String, required:true},
+	message : {type:String, required:true},
+	type : {type:String, required:true},
+	status : {type:String, required:true},
 	//createdAt: {type:Date, default:new Date()}
 },
 { timestamps: true }

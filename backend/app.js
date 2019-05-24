@@ -11,9 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //Api routes
-app.get('/', function(req,res){
-    res.status(200).send({message: "OK"});
-})
+
 app.use('/api', routes);
 
 module.exports = app;

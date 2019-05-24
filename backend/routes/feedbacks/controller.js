@@ -33,10 +33,10 @@ module.exports = {
                         message: 'No such ' + modelName
                     });
                 }
-                return res.json(item);
+                return res.status(200).json(item);
             } else {
                 let items = await controllerModel.find({$and:[ filter , {createdAt: {$lt: endDate}}]}).sort({"createdAt":-1});
-                res.send(items);
+                res.status(200).send(items);
             }
         } catch (err) {
             return res.status(500).send(err);
